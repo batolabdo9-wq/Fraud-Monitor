@@ -41,12 +41,12 @@ An end-to-end analytics project on **6.36 million mobile-money transactions**: d
 
 Slicers for **transaction type** and **week** are available on every page.
 
-<!-- Add screenshots to /images and keep these paths -->
-![Overview](images/1_overview.png)
-![Patterns](images/2_patterns.png)
-![Amounts](images/3_amounts.png)
-![Detection](images/4_detection.png)
-![Risk](images/5_risk.png)
+<!-- Screenshots are stored in /images -->
+![Overview](images/overview.png)
+![Patterns](images/patterns.png)
+![Amounts](images/amounts.png)
+![Detection](images/detection.png)
+![Risk](images/risk.png)
 
 ---
 
@@ -59,7 +59,7 @@ A **star schema** built in PostgreSQL:
 - **`dim_time`**: step, day number, hour of day, time of day
 - **`dim_transaction_type`**: type ID, type name
 
-![Data model](images/6_data_model.png)
+![Data model](images/data_model.png)
 
 ### Analytical SQL views
 The analysis was done in SQL, and each view feeds a dashboard page:
@@ -68,7 +68,7 @@ The analysis was done in SQL, and each view feeds a dashboard page:
 
 DAX measures (average fraud amount, average normal amount, fraud-to-normal ratio, bucket fraud rate, and others) are kept in a dedicated `_Measure` table.
 
-![SQL views](images/7_sql_views.png)
+![SQL views](images/sql_views.png)
 
 ---
 
@@ -93,5 +93,5 @@ DAX measures (average fraud amount, average normal amount, fraud-to-normal ratio
 3. Open `powerbi/*.pbit` in Power BI Desktop, enter your PostgreSQL connection details when prompted, and refresh the data. (The full `.pbix` is about 700 MB because it embeds the data, so only the data-free template is included here.)
 
 ## Author
-**Batool Abd Alrazag Hamed**:  Data Analyst
+**Batool Abd Alrazag Hamed**: Junior Data Analyst
 [LinkedIn](https://www.linkedin.com/in/batool-abd-alrzag-ab472424a) · batolabdo9@gmail.com
